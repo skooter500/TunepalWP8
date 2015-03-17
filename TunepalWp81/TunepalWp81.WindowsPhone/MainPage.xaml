@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="TunepalWp81.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TunepalWp81"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Pivot>
+        <PivotItem Header="Record">
+            <Page >
+                <Page.BottomAppBar>
+                    <CommandBar/>
+                </Page.BottomAppBar>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Canvas x:Name="recordIndicator" HorizontalAlignment="Center" Height="200" Margin="0,0,0,0" VerticalAlignment="Center" Width="200" RenderTransformOrigin="0,0" Background="Lime" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" Tapped="recordIndicator_Tapped"/>
+                    <TextBlock x:Name="recordMessage" HorizontalAlignment="Center" Text="TAP TO RECORD" FontSize="24" Grid.Row="1" Canvas.ZIndex="-1" />
+                </Grid>
+            </Page>
+        </PivotItem>
+        <PivotItem Header="Titles"/>
+        <PivotItem Header="My Tunes"/>
+        <PivotItem Header="Settings"/>
+    </Pivot>
+</Page>

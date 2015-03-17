@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\TunepalLib\AudioController.cpp" />
+    <ClCompile Include="..\TunepalLib\AudioRecorder.cpp" />
+    <ClCompile Include="..\TunepalLib\tunepal\config.cpp">
+      <Filter>Tunepal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TunepalLib\tunepal\FFT.cpp">
+      <Filter>Tunepal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TunepalLib\tunepal\FuzzyHistogram.cpp">
+      <Filter>Tunepal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TunepalLib\tunepal\midiinstruments.cpp">
+      <Filter>Tunepal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TunepalLib\tunepal\PitchDetector.cpp">
+      <Filter>Tunepal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TunepalLib\tunepal\pitchspeller.cpp">
+      <Filter>Tunepal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TunepalLib\tunepal\transcriber.cpp">
+      <Filter>Tunepal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TunepalLib\tunepal\utils.cpp">
+      <Filter>Tunepal</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\TunepalLib\AudioController.h" />
+    <ClInclude Include="..\TunepalLib\AudioRecorder.h" />
+    <ClInclude Include="..\TunepalLib\libsndfile\sndfile.h" />
+    <ClInclude Include="..\TunepalLib\libsndfile\sndfile.hh" />
+    <ClInclude Include="..\TunepalLib\Common.h">
+      <Filter>Tunepal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TunepalLib\tunepal\config.h">
+      <Filter>Tunepal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TunepalLib\tunepal\FFT.h">
+      <Filter>Tunepal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TunepalLib\tunepal\FuzzyHistogram.h">
+      <Filter>Tunepal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TunepalLib\tunepal\midiinstruments.h">
+      <Filter>Tunepal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TunepalLib\tunepal\PitchDetector.h">
+      <Filter>Tunepal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TunepalLib\tunepal\pitchspeller.h">
+      <Filter>Tunepal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TunepalLib\tunepal\transcriber.h">
+      <Filter>Tunepal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TunepalLib\tunepal\tunepalconstants.h">
+      <Filter>Tunepal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TunepalLib\tunepal\utils.h">
+      <Filter>Tunepal</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Tunepal">
+      <UniqueIdentifier>{5cea35d9-4e7f-490f-aa0f-de604ebb1fb7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
