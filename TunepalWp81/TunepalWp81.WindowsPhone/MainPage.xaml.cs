@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Tunepal.Core;
+using Tunepal.Core.Services;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -51,15 +53,30 @@ namespace TunepalWp81
         {
 
             var audioController = new TunepalLib.AudioController();
-            var bla = audioController.Record(0);
-            bla.Progress = (action, progress) => {
+            var rec = audioController.Record(0);
+            rec.Progress = (action, progress) => {
                 recordMessage.Text = "Recording: ";
             };
-            bla.Completed = (action, progress) =>
+            rec.Completed = (action, progress) =>
                 {
-                    recordMessage.Text = "Completed";
+                    var trans = audioController.Transcribe();
+                    trans.Completed = (action1, progress1) =>
+                        {
+                            string transcription = trans.GetResults();
+                            recordMessage.Text = transcription;
+                            var service = new TunepalWebService();
+                            service.SearchByTranscription(transcription, HandleSearchResults);
+                        };
                 };
             
+        }
+
+        private void HandleSearchResults(bool success, List<Tune> tunes)
+        {
+            foreach (Tune tune in tunes)
+            {                
+                //recordMessage.Text += tune.Name + "\n";    
+            }
         }
     }
 }

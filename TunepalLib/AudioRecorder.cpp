@@ -105,7 +105,6 @@ HRESULT AudioRecorder::ActivateCompleted( IActivateAudioInterfaceAsyncOperation 
     if (!(pcmAudio || floatAudio)) throw Platform::Exception::CreateException(AUDCLNT_E_UNSUPPORTED_FORMAT);
     // Initialize the AudioClient in Shared Mode with the user specified buffer
 
-
     hr = audioClient->Initialize(AUDCLNT_SHAREMODE_SHARED,
         0,
         250000,  // Ideally, set the buffer size to be able to contain audio of 250000e-7 secs (0.025 secs, 40fps)

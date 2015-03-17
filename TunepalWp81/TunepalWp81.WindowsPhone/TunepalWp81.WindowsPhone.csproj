@@ -80,6 +80,12 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Tunepal\Base.cs" />
+    <Compile Include="Tunepal\Disc.cs" />
+    <Compile Include="Tunepal\GlobalState.cs" />
+    <Compile Include="Tunepal\IBinarySerializable.cs" />
+    <Compile Include="Tunepal\KeySignature.cs" />
+    <Compile Include="Tunepal\LocationService.cs" />
     <Compile Include="RecordPage.xaml.cs">
       <DependentUpon>RecordPage.xaml</DependentUpon>
     </Compile>
@@ -91,6 +97,14 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tunepal\Note.cs" />
+    <Compile Include="Tunepal\PitchModel.cs" />
+    <Compile Include="Tunepal\Scale.cs" />
+    <Compile Include="Tunepal\Settings.cs" />
+    <Compile Include="Tunepal\Source.cs" />
+    <Compile Include="Tunepal\Tune.cs" />
+    <Compile Include="Tunepal\TunepalConstants.cs" />
+    <Compile Include="Tunepal\TunepalWebService.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
